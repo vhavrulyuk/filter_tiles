@@ -5,8 +5,6 @@
 
     var filterTiles;
     filterTiles = {
-        selectedGroup: "",
-
         filterTiles: function () {
             selectedGroup = $(this).attr("href").substr(1);
             $("ul.categories a.hilite").toggleClass("hilite");
