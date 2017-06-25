@@ -3,10 +3,11 @@
         $("ul.categories a").on('click', filterTiles.filterTiles);
     });
 
-    var filterTiles = {
+    var filterTiles;
+    filterTiles = {
 
         filterTiles: function () {
-            selectedGroup = $(this).attr("href").toString().substr(1);
+            selectedGroup = $(this).attr("href").substr(1);
             if (selectedGroup === "cat-all") {
                 $("ul.tiles li").css("display", "inline-block");
             } else {
@@ -17,7 +18,7 @@
             console.log('filtering...' + selectedGroup);
         }
 
-    }
+    };
 })(jQuery);
 
 
