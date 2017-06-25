@@ -1,10 +1,9 @@
 (function ($) {
-    $(function () {
-        $("ul.categories a").on('click', filterTiles.filterTiles);
-    });
+    var FilterTiles = {
+        onReady: function () {
+            $("ul.categories a").on('click', FilterTiles.filterTiles);
+        },
 
-    var filterTiles;
-    filterTiles = {
         filterTiles: function () {
             selectedGroup = $(this).attr("href").substr(1);
             $("ul.categories a.hilite").toggleClass("hilite");
@@ -17,6 +16,8 @@
             }
         }
     };
+
+    $(FilterTiles.onReady);
 })(jQuery);
 
 
